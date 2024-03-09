@@ -34,7 +34,7 @@ local Tabs = {
     Main = Window:AddTab({ Title = "chủ yếu", Icon = "home" }),
     Setting = Window:AddTab({ Title = "cài đặt", Icon = "settings" }),
     Stats = Window:AddTab({ Title = "Chỉ số", Icon = "plus-circle" }),
-    Player = Window:AddTab({ Title = "người chơi", Icon = "box" }),
+    dat = Window:AddTab({ Title = "người chơi", Icon = "fish" }),
     Teleport = Window:AddTab({ Title = "đảo", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "trái ác quỷ", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "tập kích", Icon = "swords" }),
