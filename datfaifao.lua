@@ -31,17 +31,17 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "chủ yếu", Icon = "home" }),
-    Setting = Window:AddTab({ Title = "cài đặt", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Chỉ số", Icon = "plus-circle" }),
-    dat = Window:AddTab({ Title = "người chơi", Icon = "fish" }),
-    Teleport = Window:AddTab({ Title = "đảo", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "trái ác quỷ", Icon = "cherry" }),
-    Raid = Window:AddTab({ Title = "tập kích", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "Dat v4", Icon = "chevrons-right" }),
-    Shop = Window:AddTab({ Title = "cửa hàng", Icon = "shopping-cart" }),
-	Misc = Window:AddTab({ Title = "linh tinh", Icon = "list-plus" }),
-    Hop = Window:AddTab({ Title = "đổi sever", Icon = "wifi" }),
+    Chủ yếu = Window:AddTab({ Title = "chủ yếu", Icon = "home" }),
+    cài đặt = Window:AddTab({ Title = "cài đặt", Icon = "settings" }),
+    chỉ số = Window:AddTab({ Title = "Chỉ số", Icon = "plus-circle" }),
+    người chơi = Window:AddTab({ Title = "người chơi", Icon = "fish" }),
+    đảo = Window:AddTab({ Title = "đảo", Icon = "palmtree" }),
+    trái ác quỷ = Window:AddTab({ Title = "trái ác quỷ", Icon = "cherry" }),
+    tập kích = Window:AddTab({ Title = "tập kích", Icon = "swords" }),
+    tộc = Window:AddTab({ Title = "tộc", Icon = "chevrons-right" }),
+    cửa hàng = Window:AddTab({ Title = "cửa hàng", Icon = "shopping-cart" }),
+	linh tinh = Window:AddTab({ Title = "linh tinh", Icon = "list-plus" }),
+    đổi sever = Window:AddTab({ Title = "đổi sever", Icon = "wifi" }),
 }
 local Options = Fluent.Options
 do
@@ -6693,7 +6693,7 @@ local Mastery = Tabs.Shop:AddSection("Fighting Styles")
 
 Tabs.Shop:AddButton({
 	Title = "Black Leg",
-	Description = "Mua black leg",
+	Description = "Mua chân lửa 1",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
 	end
@@ -6701,21 +6701,21 @@ Tabs.Shop:AddButton({
 
 Tabs.Shop:AddButton({
 	Title = "Electro",
-	Description = "Mua electro",
+	Description = "Mua thỏ 1",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
 	end
 })
 Tabs.Shop:AddButton({
 	Title = "Fishman Karate",
-	Description = "Mua fishman karate",
+	Description = "Mua cá",
 	Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
 	end
 })
 Tabs.Shop:AddButton({
 	Title = "Dragon Claw",
-	Description = "Mua dragon claw",
+	Description = "Mua con rồng 1",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
@@ -6723,21 +6723,21 @@ Tabs.Shop:AddButton({
 })
 Tabs.Shop:AddButton({
 	Title = "Superhuman",
-	Description = "Mua superhuman",
+	Description = "Mua võ v1",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
 	end
 })
 Tabs.Shop:AddButton({
 	Title = "Death Step",
-	Description = "Mua Death Step",
+	Description = "Mua chân lửa",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
 	end
 })
 Tabs.Shop:AddButton({
 	Title = "Sharkman Karate",
-	Description = "Mua sharkman karate",
+	Description = "Mua con cá",
 	Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
@@ -6745,21 +6745,21 @@ Tabs.Shop:AddButton({
 })
 Tabs.Shop:AddButton({
 	Title = "Electric Claw",
-	Description = "Mua electric claw",
+	Description = "Mua con thỏ",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
 	end
 })
 Tabs.Shop:AddButton({
 	Title = "Dragon Talon",
-	Description = "Mua dragon talon",
+	Description = "Mua con rồng",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
 	end
 })
 Tabs.Shop:AddButton({
 	Title = "Godhuman",
-	Description = "Mua godhuman",
+	Description = "Mua võ 2",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
 	end
@@ -6874,7 +6874,7 @@ local Mastery = Tabs.Misc:AddSection("Team")
 
 
 Tabs.Misc:AddButton({
-	Title = "Join Pirates Team",
+	Title = "vao hai tac dat villa",
 	Description = "Vào hải tặc",
 	Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates") 
@@ -6883,7 +6883,7 @@ Tabs.Misc:AddButton({
 
 
 Tabs.Misc:AddButton({
-	Title = "Join Marines Team",
+	Title = "vao bang dat villa",
 	Description = "Vào hải quân",
 	Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
@@ -6940,7 +6940,7 @@ local Mastery = Tabs.Misc:AddSection("Troll")
 
 
 Tabs.Misc:AddButton({
-	Title = "Rain Fruit",
+	Title = "mưa df",
 	Description = "Mưa trái ác quỷ",
 	Callback = function()
         for i, v in pairs(game:GetObjects("rbxassetid://14759368201")[1]:GetChildren()) do
@@ -7320,6 +7320,6 @@ Window:SelectTab(1)
 Fluent:Notify({
     Title = "Fai Fao Hub",
     Content = "The script has been loaded.",
-    Duration = 8
+    Duration = 1
 })
 SaveManager:LoadAutoloadConfig()
